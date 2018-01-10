@@ -15,7 +15,7 @@ import org.springframework.web.client.RestTemplate;
 import javax.net.ssl.*;
 import java.io.IOException;
 import java.net.HttpURLConnection;
-import java.net.Proxy;
+ import java.net.Proxy;
 import java.net.URL;
 import java.security.KeyManagementException;
 import java.security.NoSuchAlgorithmException;
@@ -24,7 +24,8 @@ import java.security.cert.X509Certificate;
 import java.util.Collections;
 
 /**
- * @author mborges
+ 
+* @author mborges
  */
 @SpringBootApplication
 @EnableCircuitBreaker
@@ -39,7 +40,7 @@ public class ArticulateApplication {
     ObjectMapper mapper = new ObjectMapper();
     mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
     mapper.registerModule(new Jackson2HalModule());
-
+     //testing
     MappingJackson2HttpMessageConverter converter = new MappingJackson2HttpMessageConverter();
     converter.setSupportedMediaTypes(MediaType.parseMediaTypes("application/json"));
     converter.setObjectMapper(mapper);
